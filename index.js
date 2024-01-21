@@ -4,8 +4,10 @@ const { connection } = require("./db");
 const { libraryRoute } = require("./routes/masai_library.route");
 const swaaggerJsDocs= require("swagger-jsdoc")
 const swaggerUi= require("swagger-ui-express")
+const cors= require("cors")
 const app= express();
 app.use(express.json())
+app.use(cors())
 
 // this is the options to configure the swagger
 const options={
